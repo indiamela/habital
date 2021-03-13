@@ -1,0 +1,30 @@
+PODS:
+  - ChameleonFramework (2.1.0):
+    - ChameleonFramework/Default (= 2.1.0)
+  - ChameleonFramework/Default (2.1.0)
+  - FSCalendar (2.8.2)
+  - IBAnimatable (6.1.0)
+  - SwiftDate (6.3.1)
+
+DEPENDENCIES:
+  - ChameleonFramework
+  - FSCalendar
+  - IBAnimatable
+  - SwiftDate
+
+SPEC REPOS:
+  trunk:
+    - ChameleonFramework
+    - FSCalendar
+    - IBAnimatable
+    - SwiftDate
+
+SPEC CHECKSUMS:
+  ChameleonFramework: d21a3cc247abfe5e37609a283a8238b03575cf64
+  FSCalendar: e6a2eb9c571bf0719ed797ef807e08426753c241
+  IBAnimatable: 99dddd4c0625884a301ba3ecbc1615f8a390368e
+  SwiftDate: 72d28954e8e1c6c1c0f917ccc8005e4f83c7d4b2
+
+PODFILE CHECKSUM: 9f5379ac4e99db218ac1c3e383c7d0ea3f90d5f7
+
+COCOAPODS: 1.10.1
