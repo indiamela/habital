@@ -140,7 +140,10 @@
 			isa = PBXGroup;
 			children = (
 				F26990C225FC6DFC00E37781 /* HabitalApp.swift */,
-				F26990C425FC6DFC00E37781 /* ContentView.swift */,
+				F269910825FCD1F700E37781 /* Scene */,
+				F269910725FCD1ED00E37781 /* Helpers */,
+				F269910625FCD1D100E37781 /* SubViews */,
+				F269910525FCD1C000E37781 /* Model */,
 				F26990C625FC6DFD00E37781 /* Assets.xcassets */,
 				F26990CB25FC6DFD00E37781 /* Persistence.swift */,
 				F26990D025FC6DFD00E37781 /* Info.plist */,
@@ -174,6 +177,35 @@
 				F26990E625FC6DFD00E37781 /* Info.plist */,
 			);
 			path = HabitalUITests;
+			sourceTree = "<group>";
+		};
+		F269910525FCD1C000E37781 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		F269910625FCD1D100E37781 /* SubViews */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = SubViews;
+			sourceTree = "<group>";
+		};
+		F269910725FCD1ED00E37781 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		F269910825FCD1F700E37781 /* Scene */ = {
+			isa = PBXGroup;
+			children = (
+				F26990C425FC6DFC00E37781 /* ContentView.swift */,
+			);
+			path = Scene;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
