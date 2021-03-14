@@ -18,6 +18,7 @@
 		F26990CF25FC6DFD00E37781 /* Habital.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F26990CD25FC6DFD00E37781 /* Habital.xcdatamodeld */; };
 		F26990DA25FC6DFD00E37781 /* HabitalTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F26990D925FC6DFD00E37781 /* HabitalTests.swift */; };
 		F26990E525FC6DFD00E37781 /* HabitalUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F26990E425FC6DFD00E37781 /* HabitalUITests.swift */; };
+		F269910D25FDAB2800E37781 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F269910C25FDAB2800E37781 /* Launch Screen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +60,7 @@
 		F26990E025FC6DFD00E37781 /* HabitalUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HabitalUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F26990E425FC6DFD00E37781 /* HabitalUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HabitalUITests.swift; sourceTree = "<group>"; };
 		F26990E625FC6DFD00E37781 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F269910C25FDAB2800E37781 /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 		F7845BAA0749EB37A0E9070C /* Pods_Habital.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Habital.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F889212302430D721F27EF78 /* Pods-Habital-HabitalUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Habital-HabitalUITests.release.xcconfig"; path = "Target Support Files/Pods-Habital-HabitalUITests/Pods-Habital-HabitalUITests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -140,14 +142,15 @@
 			isa = PBXGroup;
 			children = (
 				F26990C225FC6DFC00E37781 /* HabitalApp.swift */,
-				F269910825FCD1F700E37781 /* Scene */,
+				F269910525FCD1C000E37781 /* Model */,
 				F269910725FCD1ED00E37781 /* Helpers */,
 				F269910625FCD1D100E37781 /* SubViews */,
-				F269910525FCD1C000E37781 /* Model */,
+				F269910825FCD1F700E37781 /* Scene */,
 				F26990C625FC6DFD00E37781 /* Assets.xcassets */,
 				F26990CB25FC6DFD00E37781 /* Persistence.swift */,
 				F26990D025FC6DFD00E37781 /* Info.plist */,
 				F26990CD25FC6DFD00E37781 /* Habital.xcdatamodeld */,
+				F269910C25FDAB2800E37781 /* Launch Screen.storyboard */,
 				F26990C825FC6DFD00E37781 /* Preview Content */,
 			);
 			path = Habital;
@@ -316,6 +319,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F269910D25FDAB2800E37781 /* Launch Screen.storyboard in Resources */,
 				F26990CA25FC6DFD00E37781 /* Preview Assets.xcassets in Resources */,
 				F26990C725FC6DFD00E37781 /* Assets.xcassets in Resources */,
 			);
