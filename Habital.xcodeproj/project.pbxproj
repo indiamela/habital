@@ -19,6 +19,7 @@
 		F26990DA25FC6DFD00E37781 /* HabitalTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F26990D925FC6DFD00E37781 /* HabitalTests.swift */; };
 		F26990E525FC6DFD00E37781 /* HabitalUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F26990E425FC6DFD00E37781 /* HabitalUITests.swift */; };
 		F269910D25FDAB2800E37781 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F269910C25FDAB2800E37781 /* Launch Screen.storyboard */; };
+		F285BC9E25FED33500DA9459 /* CreateVew.swift in Sources */ = {isa = PBXBuildFile; fileRef = F285BC9D25FED33500DA9459 /* CreateVew.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +62,7 @@
 		F26990E425FC6DFD00E37781 /* HabitalUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HabitalUITests.swift; sourceTree = "<group>"; };
 		F26990E625FC6DFD00E37781 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F269910C25FDAB2800E37781 /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
+		F285BC9D25FED33500DA9459 /* CreateVew.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateVew.swift; sourceTree = "<group>"; };
 		F7845BAA0749EB37A0E9070C /* Pods_Habital.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Habital.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F889212302430D721F27EF78 /* Pods-Habital-HabitalUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Habital-HabitalUITests.release.xcconfig"; path = "Target Support Files/Pods-Habital-HabitalUITests/Pods-Habital-HabitalUITests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -207,6 +209,7 @@
 			isa = PBXGroup;
 			children = (
 				F26990C425FC6DFC00E37781 /* ContentView.swift */,
+				F285BC9D25FED33500DA9459 /* CreateVew.swift */,
 			);
 			path = Scene;
 			sourceTree = "<group>";
@@ -452,6 +455,7 @@
 				F26990CC25FC6DFD00E37781 /* Persistence.swift in Sources */,
 				F26990CF25FC6DFD00E37781 /* Habital.xcdatamodeld in Sources */,
 				F26990C525FC6DFC00E37781 /* ContentView.swift in Sources */,
+				F285BC9E25FED33500DA9459 /* CreateVew.swift in Sources */,
 				F26990C325FC6DFC00E37781 /* HabitalApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

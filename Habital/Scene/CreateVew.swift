@@ -1,20 +1,20 @@
 //
-//  CreateView.swift
+//  CreateVew.swift
 //  Habital
 //
-//  Created by Taishi Kusunose on 2021/03/14.
+//  Created by Taishi Kusunose on 2021/03/15.
 //
 
 import SwiftUI
 
-struct CreateView: View {
+struct CreateVew: View {
     var body: some View {
         Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
     }
 }
 
-struct CreateView_Previews: PreviewProvider {
+struct CreateVew_Previews: PreviewProvider {
     static var previews: some View {
-        CreateView()
+        CreateVew()
     }
 }
