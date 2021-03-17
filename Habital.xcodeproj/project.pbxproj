@@ -25,6 +25,7 @@
 		F285BCAD26016F1500DA9459 /* ObstacleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F285BCAC26016F1500DA9459 /* ObstacleView.swift */; };
 		F285BCB226016F1E00DA9459 /* OutcomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F285BCB126016F1E00DA9459 /* OutcomeView.swift */; };
 		F285BCB726016F2A00DA9459 /* PlanView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F285BCB626016F2A00DA9459 /* PlanView.swift */; };
+		F285BCBC2602B80800DA9459 /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F285BCBB2602B80800DA9459 /* Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -73,6 +74,7 @@
 		F285BCAC26016F1500DA9459 /* ObstacleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObstacleView.swift; sourceTree = "<group>"; };
 		F285BCB126016F1E00DA9459 /* OutcomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OutcomeView.swift; sourceTree = "<group>"; };
 		F285BCB626016F2A00DA9459 /* PlanView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanView.swift; sourceTree = "<group>"; };
+		F285BCBB2602B80800DA9459 /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
 		F7845BAA0749EB37A0E9070C /* Pods_Habital.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Habital.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F889212302430D721F27EF78 /* Pods-Habital-HabitalUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Habital-HabitalUITests.release.xcconfig"; path = "Target Support Files/Pods-Habital-HabitalUITests/Pods-Habital-HabitalUITests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -211,6 +213,7 @@
 		F269910725FCD1ED00E37781 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				F285BCBB2602B80800DA9459 /* Extension.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -471,6 +474,7 @@
 				F26990CC25FC6DFD00E37781 /* Persistence.swift in Sources */,
 				F285BCA326016AF800DA9459 /* WelcomeView.swift in Sources */,
 				F285BCB226016F1E00DA9459 /* OutcomeView.swift in Sources */,
+				F285BCBC2602B80800DA9459 /* Extension.swift in Sources */,
 				F26990CF25FC6DFD00E37781 /* Habital.xcdatamodeld in Sources */,
 				F26990C525FC6DFC00E37781 /* ContentView.swift in Sources */,
 				F285BCAD26016F1500DA9459 /* ObstacleView.swift in Sources */,
