@@ -13,44 +13,61 @@ struct WelcomeView: View {
     @State var selection: Int = 0
     @State var timerAdded: Bool = false
     
+    
     var body: some View {
         NavigationView{
             ZStack{
-                TabView(selection: $selection,
-                        content:  {
-                            ForEach(0..<maxCount){ count in
-                                Image("start\(count)")
-                                    .resizable()
-                                    .scaledToFill()
-                                    .edgesIgnoringSafeArea(.all)
-
-                            }
-                        })
-                    .animation(.default)
-                    .onAppear(perform: {
-                        if !timerAdded {
-                            addTimer()
-                        }
-                    })
+                //                TabView(selection: $selection,
+                //                        content:  {
+                //                            ForEach(0..<maxCount){ count in
                 
-//                VStack{
-//                    Spacer()
-//                    NavigationLink(
-//                        destination: WishView(),
-//                        label: {
-//                            Text("Navigate")
-//                                .foregroundColor(Color.MyTheme.DarkGray)
-//                                .font(.headline)
-//                                .fontWeight(.bold)
-//                                .frame(maxWidth:.infinity)
-//                                .frame(height: 60)
-//                        }
-//                    )
-//                    .background(Color.MyTheme.Orange)
-//                    .cornerRadius(60)
-//                    .shadow(radius: 12)
-//                    .padding(.horizontal,50)
-//                }
+                ZStack{
+                    Image("start1")
+                        .resizable()
+                        .scaledToFill()
+                    Rectangle()
+                        .fill(Color.black)
+                        .opacity(0.3)
+                }
+                .edgesIgnoringSafeArea(.all)
+
+                //
+                //                            }
+                //                        })
+                //                    .animation(.easeIn(duration: 1.0))
+                //                    .onAppear(perform: {
+                //                        if !timerAdded {
+                //                            addTimer()
+                //                        }
+                //                    })
+                
+                VStack{
+                    Text("Welcome to Habital")
+                        .foregroundColor(Color.MyTheme.Orange)
+                        .font(.largeTitle)
+                        .fontWeight(.bold)
+                        .frame(maxWidth: .infinity, alignment: .center)
+                        .padding(.bottom, 10)
+                    Text("Today's action makes your LIFE")
+                        .foregroundColor(.white)
+                        .font(.footnote)
+                    Spacer()
+                    NavigationLink(
+                        destination: WishView(),
+                        label: {
+                            Text("start".uppercased())
+                                .foregroundColor(Color.MyTheme.DarkGray)
+                                .font(.title2)
+                                .fontWeight(.bold)
+                                .frame(maxWidth:.infinity)
+                                .frame(height: 60)
+                        }
+                    )
+                    .background(LinearGradient.MyTheme.gradientOrange)
+                    .cornerRadius(60)
+                    .shadow(radius: 12)
+                    .padding(.horizontal,50)
+                }
             }
         }
     }

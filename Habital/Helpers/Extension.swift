@@ -17,10 +17,26 @@ extension Color {
             return Color("ColorOrange")
         }
         static var Pink:Color {
-            return Color("ColoPink")
+            return Color("ColorPink")
         }
     }
 }
+
+extension LinearGradient {
+    struct MyTheme {
+        static var gradientPink:LinearGradient{
+            return LinearGradient(gradient: Gradient(colors: [Color.MyTheme.Pink, Color.pink]), startPoint: .leading, endPoint: .trailing)
+        }
+        static var gradiateBackGround:LinearGradient {
+            return LinearGradient(gradient: Gradient(colors: [Color.MyTheme.Orange, Color.MyTheme.Orange.opacity(0.2)]), startPoint: .bottom, endPoint: .top)
+        }
+        static var gradientOrange:LinearGradient {
+            LinearGradient(gradient: Gradient(colors: [Color.yellow, Color.orange]), startPoint: .leading, endPoint: .trailing)
+        }
+    }
+}
+
+
 
     struct MyButtonStyle: ButtonStyle {
       func makeBody(configuration: Self.Configuration) -> some View {
