@@ -8,7 +8,10 @@
 import SwiftUI
 
 struct WishView: View {
-    @State var wishText: String = ""
+    
+//    @ObservedObject var woop: WoopEntity
+    @State var wishText = ""
+    
     var body: some View {
         ZStack{
             VStack{
@@ -31,7 +34,6 @@ struct WishView: View {
             .edgesIgnoringSafeArea(.all)
 
             VStack{
-                Spacer()
                 VStack(alignment: .center, spacing: 20) {
                     Text("Wish")
                         .font(.custom("Times-Roman", size: 40))
@@ -39,53 +41,66 @@ struct WishView: View {
                     Text("あなたが身につけたい習慣目標は？")
                         .font(.headline)
                 }
+                .padding(.top, 200)
                 .foregroundColor(Color.MyTheme.DarkGray)
-                .padding(.bottom, 70)
                 TextField("add your wish", text: $wishText)
                     .frame(height: 40)
                     .background(Color.white)
                     .cornerRadius(10)
-                    .padding(.bottom, 50)
+                    .padding(.top, 20)
                     .shadow(radius: 5)
                     .foregroundColor(Color.MyTheme.DarkGray)
                 Text("たとえば...")
                     .font(.subheadline)
-                    .padding(.bottom, 15)
+                    .padding(.top, 50)
                     .frame(maxWidth: .infinity, alignment: .leading)
                     .foregroundColor(Color.MyTheme.DarkGray)
-                VStack(alignment: .leading, spacing: 10, content: {
-                    Text("読書をする")
-                    Text("ランニングをする")
-                    Text("瞑想をする")
+                VStack(alignment: .leading, spacing: 5, content: {
+                    Text("- 読書をする")
+                    Text("- ランニングをする")
+                    Text("- 瞑想をする")
                 })
                 .font(.headline)
-                .padding(.bottom, 100)
+                .padding(.top, 10)
                 .padding(.leading, 10)
                 .frame(maxWidth: .infinity, alignment: .leading)
                 .foregroundColor(Color.MyTheme.DarkGray)
-
-                NavigationLink(
-                    destination: OutcomeView(),
-                    label: {
-                        Text("next".uppercased())
-                            .foregroundColor(Color.MyTheme.DarkGray)
-                            .font(.title2)
-                            .fontWeight(.bold)
-                            .frame(maxWidth:.infinity)
-                            .frame(height: 60)
-                    }
-                )
-                .background(LinearGradient.MyTheme.gradientPink)
-                .cornerRadius(60)
-                .shadow(radius: 12)
+                
+                Spacer()
+                
+                if wishText != "" {
+                    NavigationLink(
+                        destination: OutcomeView(),
+                        label: {
+                            Text("next".uppercased())
+                                .foregroundColor(Color.MyTheme.DarkGray)
+                                .font(.title2)
+                                .fontWeight(.bold)
+                                .frame(maxWidth:.infinity)
+                                .frame(height: 60)
+                        }
+                    )
+                    .background(LinearGradient.MyTheme.gradientPink)
+                    .cornerRadius(60)
+                    .shadow(radius: 12)
+                }
             }
             .padding(.horizontal,50)
         }
     }
+    
+//    func showNextButton() -> Bool{
+//        guard wishText == "" else {
+//            return true
+//        }
+//        return false
+//    }
 }
 
 struct WishView_Previews: PreviewProvider {
     static var previews: some View {
-        WishView()
+        NavigationView{
+            WishView()
+        }
     }
 }
