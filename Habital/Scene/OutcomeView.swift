@@ -48,23 +48,20 @@ struct OutcomeView: View {
                                 .font(.headline)
                         }
                         .foregroundColor(Color.MyTheme.DarkGray)
-                        .padding(.top, 150)
-
-                        Spacer()
+                        .padding(.top, 200)
 
                         
-                        HStack(alignment: .center, spacing: 10, content: {
-                            TextField("しなやかな身体になる", text: $outcomeText)
-                                .textFieldStyle(RoundedBorderTextFieldStyle())
-                            Button(action: {}) {
-                                Image(systemName: "plus.circle.fill")
-                            }
-                            Button(action: {}) {
-                                Text("Cancel")
-                                    .foregroundColor(.red)
-                            }
-                        })
-                        
+//                        HStack(alignment: .center, spacing: 10, content: {
+//                            TextField("しなやかな身体になる", text: $outcomeText)
+//                                .textFieldStyle(RoundedBorderTextFieldStyle())
+//                            Button(action: {}) {
+//                                Image(systemName: "plus.circle.fill")
+//                            }
+//                            Button(action: {}) {
+//                                Image(systemName: "minus.circle.fill")
+//                                    .foregroundColor(.red)
+//                            }
+//                        })
                         
                         
                         Spacer()
