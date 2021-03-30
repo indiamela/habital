@@ -43,7 +43,7 @@ struct WoopContentView: View {
                     Text(category.title())
                         .font(.custom("Times-Roman", size: 40))
                         .fontWeight(.bold)
-                    Text(category.title())
+                    Text(category.subtitle())
                         .font(.headline)
                 }
                 .padding(.top, 200)
@@ -65,7 +65,8 @@ struct WoopContentView: View {
                 
                 if resultText != "" {
                     NavigationLink(
-                        destination: OutcomeView(),
+                        destination:
+                            WoopContentView(category: nextCategory(categoty: category)!),
                         label: {
                             Text("next".uppercased())
                                 .foregroundColor(Color.MyTheme.DarkGray)
@@ -81,6 +82,19 @@ struct WoopContentView: View {
                 }
             }
             .padding(.horizontal,50)
+        }
+    }
+    
+    func nextCategory(categoty: Woop.Category)->Woop.Category?{
+        switch category{
+        case .Wish:
+            return .Outcome
+        case .Outcome:
+            return .Obstacle
+        case .Obstacle:
+            return .Plan
+        default:
+            return nil
         }
     }
 }

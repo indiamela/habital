@@ -23,12 +23,7 @@
 		F26990DA25FC6DFD00E37781 /* HabitalTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F26990D925FC6DFD00E37781 /* HabitalTests.swift */; };
 		F26990E525FC6DFD00E37781 /* HabitalUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F26990E425FC6DFD00E37781 /* HabitalUITests.swift */; };
 		F269910D25FDAB2800E37781 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F269910C25FDAB2800E37781 /* Launch Screen.storyboard */; };
-		F285BC9E25FED33500DA9459 /* CreateVew.swift in Sources */ = {isa = PBXBuildFile; fileRef = F285BC9D25FED33500DA9459 /* CreateVew.swift */; };
 		F285BCA326016AF800DA9459 /* WelcomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F285BCA226016AF800DA9459 /* WelcomeView.swift */; };
-		F285BCA826016B0800DA9459 /* WishView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F285BCA726016B0800DA9459 /* WishView.swift */; };
-		F285BCAD26016F1500DA9459 /* ObstacleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F285BCAC26016F1500DA9459 /* ObstacleView.swift */; };
-		F285BCB226016F1E00DA9459 /* OutcomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F285BCB126016F1E00DA9459 /* OutcomeView.swift */; };
-		F285BCB726016F2A00DA9459 /* PlanView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F285BCB626016F2A00DA9459 /* PlanView.swift */; };
 		F285BCBC2602B80800DA9459 /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F285BCBB2602B80800DA9459 /* Extension.swift */; };
 		F285BCEA2608070C00DA9459 /* WoopList.swift in Sources */ = {isa = PBXBuildFile; fileRef = F285BCE92608070C00DA9459 /* WoopList.swift */; };
 		F285BCEF26095DB400DA9459 /* WoopModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F285BCEE26095DB400DA9459 /* WoopModel.swift */; };
@@ -78,12 +73,7 @@
 		F26990E425FC6DFD00E37781 /* HabitalUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HabitalUITests.swift; sourceTree = "<group>"; };
 		F26990E625FC6DFD00E37781 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F269910C25FDAB2800E37781 /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
-		F285BC9D25FED33500DA9459 /* CreateVew.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateVew.swift; sourceTree = "<group>"; };
 		F285BCA226016AF800DA9459 /* WelcomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeView.swift; sourceTree = "<group>"; };
-		F285BCA726016B0800DA9459 /* WishView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WishView.swift; sourceTree = "<group>"; };
-		F285BCAC26016F1500DA9459 /* ObstacleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObstacleView.swift; sourceTree = "<group>"; };
-		F285BCB126016F1E00DA9459 /* OutcomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OutcomeView.swift; sourceTree = "<group>"; };
-		F285BCB626016F2A00DA9459 /* PlanView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanView.swift; sourceTree = "<group>"; };
 		F285BCBB2602B80800DA9459 /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
 		F285BCE92608070C00DA9459 /* WoopList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WoopList.swift; sourceTree = "<group>"; };
 		F285BCEE26095DB400DA9459 /* WoopModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WoopModel.swift; sourceTree = "<group>"; };
@@ -239,13 +229,8 @@
 			isa = PBXGroup;
 			children = (
 				F26990C425FC6DFC00E37781 /* ContentView.swift */,
-				F285BC9D25FED33500DA9459 /* CreateVew.swift */,
 				F285BCA226016AF800DA9459 /* WelcomeView.swift */,
-				F285BCA726016B0800DA9459 /* WishView.swift */,
 				F239657A261076E0004A37BB /* WoopContentView.swift */,
-				F285BCAC26016F1500DA9459 /* ObstacleView.swift */,
-				F285BCB126016F1E00DA9459 /* OutcomeView.swift */,
-				F285BCB626016F2A00DA9459 /* PlanView.swift */,
 			);
 			path = Scene;
 			sourceTree = "<group>";
@@ -488,21 +473,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F285BCA826016B0800DA9459 /* WishView.swift in Sources */,
 				F26990CC25FC6DFD00E37781 /* Persistence.swift in Sources */,
 				F285BCA326016AF800DA9459 /* WelcomeView.swift in Sources */,
-				F285BCB226016F1E00DA9459 /* OutcomeView.swift in Sources */,
 				F239657B261076E0004A37BB /* WoopContentView.swift in Sources */,
 				F285BCBC2602B80800DA9459 /* Extension.swift in Sources */,
 				F26990CF25FC6DFD00E37781 /* Habital.xcdatamodeld in Sources */,
 				F285BCEA2608070C00DA9459 /* WoopList.swift in Sources */,
 				F239656C260BF7C8004A37BB /* WoopArrayObject.swift in Sources */,
 				F26990C525FC6DFC00E37781 /* ContentView.swift in Sources */,
-				F285BCAD26016F1500DA9459 /* ObstacleView.swift in Sources */,
-				F285BC9E25FED33500DA9459 /* CreateVew.swift in Sources */,
 				F26990C325FC6DFC00E37781 /* HabitalApp.swift in Sources */,
 				F2396576261075A4004A37BB /* WoopSubViews.swift in Sources */,
-				F285BCB726016F2A00DA9459 /* PlanView.swift in Sources */,
 				F285BCEF26095DB400DA9459 /* WoopModel.swift in Sources */,
 				F2396571261059C7004A37BB /* WoopEntity.swift in Sources */,
 			);

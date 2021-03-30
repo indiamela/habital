@@ -53,7 +53,7 @@ struct WelcomeView: View {
                         .font(.footnote)
                     Spacer()
                     NavigationLink(
-                        destination: WishView(),
+                        destination: WoopContentView(category: .Wish),
                         label: {
                             Text("start".uppercased())
                                 .foregroundColor(Color.MyTheme.DarkGray)
