@@ -21,10 +21,10 @@ struct WoopContentView: View {
         ZStack{
             VStack{
                 Image(category.topImage())
-                    .scaledToFit()
+                    .resizable()
+                    .scaledToFill()
                     .frame(width: UIScreen.main.bounds.width, height:UIScreen.main.bounds.height/2.5, alignment: .leading)
-                    .offset(x: -160, y: 30)
-                    .clipped()
+//                    .clipped()
                 Rectangle()
                     .fill(Color.MyTheme.Orange)
             }
@@ -101,9 +101,20 @@ struct WoopContentView: View {
 
 struct WoopContentView_Previews: PreviewProvider {
     static var previews: some View {
-        NavigationView{
-//            WoopContentView(topImage: "wish", title: "Wish", subtitle: "あなたが身につけたい習慣目標は？", textField: "add your wish")
-            WoopContentView(category: .Wish)
+        Group {
+            NavigationView{
+                WoopContentView(category: .Wish)
+            }
+            NavigationView{
+                WoopContentView(category: .Outcome)
+            }
+            NavigationView{
+                WoopContentView(category: .Obstacle)
+            }
+            NavigationView{
+                WoopContentView(category: .Plan)
+            }
+
         }
     }
 }
