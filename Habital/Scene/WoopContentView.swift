@@ -57,8 +57,21 @@ struct WoopContentView: View {
                     .shadow(radius: 5)
                     .foregroundColor(Color.MyTheme.DarkGray)
                 
-                WoopSubViews(category: category)
-                    .padding(.top, 50)
+                switch category{
+                case .Wish:
+                    WishSubView()
+                        .padding(.top, 50)
+                case .Outcome:
+                    OutcomeSubView()
+                        .padding(.top, 50)
+                case .Obstacle:
+                    ObstacleSubView()
+                        .padding(.top, 50)
+                case .Plan:
+                    PlanSubView()
+                        .padding(.top, 50)
+                }
+
 
                 
                 Spacer()
