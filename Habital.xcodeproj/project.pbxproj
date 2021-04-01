@@ -13,6 +13,7 @@
 		F2340D3826153A8E009E3394 /* OutcomeSubView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2340D3726153A8E009E3394 /* OutcomeSubView.swift */; };
 		F2340D3D26153A9F009E3394 /* ObstacleSubView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2340D3C26153A9F009E3394 /* ObstacleSubView.swift */; };
 		F2340D4226153AA9009E3394 /* PlanSubView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2340D4126153AA9009E3394 /* PlanSubView.swift */; };
+		F2340D4726168940009E3394 /* ConfirmView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2340D4626168940009E3394 /* ConfirmView.swift */; };
 		F239656C260BF7C8004A37BB /* WoopArrayObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = F239656B260BF7C8004A37BB /* WoopArrayObject.swift */; };
 		F2396571261059C7004A37BB /* WoopEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2396570261059C7004A37BB /* WoopEntity.swift */; };
 		F2396576261075A4004A37BB /* WishSubView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2396575261075A4004A37BB /* WishSubView.swift */; };
@@ -60,6 +61,7 @@
 		F2340D3726153A8E009E3394 /* OutcomeSubView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OutcomeSubView.swift; sourceTree = "<group>"; };
 		F2340D3C26153A9F009E3394 /* ObstacleSubView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObstacleSubView.swift; sourceTree = "<group>"; };
 		F2340D4126153AA9009E3394 /* PlanSubView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanSubView.swift; sourceTree = "<group>"; };
+		F2340D4626168940009E3394 /* ConfirmView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfirmView.swift; sourceTree = "<group>"; };
 		F239656B260BF7C8004A37BB /* WoopArrayObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WoopArrayObject.swift; sourceTree = "<group>"; };
 		F2396570261059C7004A37BB /* WoopEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WoopEntity.swift; sourceTree = "<group>"; };
 		F2396575261075A4004A37BB /* WishSubView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WishSubView.swift; sourceTree = "<group>"; };
@@ -240,6 +242,7 @@
 				F26990C425FC6DFC00E37781 /* ContentView.swift */,
 				F285BCA226016AF800DA9459 /* WelcomeView.swift */,
 				F239657A261076E0004A37BB /* WoopContentView.swift */,
+				F2340D4626168940009E3394 /* ConfirmView.swift */,
 			);
 			path = Scene;
 			sourceTree = "<group>";
@@ -487,6 +490,7 @@
 				F239657B261076E0004A37BB /* WoopContentView.swift in Sources */,
 				F2340D4226153AA9009E3394 /* PlanSubView.swift in Sources */,
 				F285BCBC2602B80800DA9459 /* Extension.swift in Sources */,
+				F2340D4726168940009E3394 /* ConfirmView.swift in Sources */,
 				F26990CF25FC6DFD00E37781 /* Habital.xcdatamodeld in Sources */,
 				F285BCEA2608070C00DA9459 /* WoopList.swift in Sources */,
 				F239656C260BF7C8004A37BB /* WoopArrayObject.swift in Sources */,

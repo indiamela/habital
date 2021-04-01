@@ -18,7 +18,7 @@ struct ObstacleSubView: View {
             VStack(alignment: .leading, spacing: 5, content: {
                 Text("- 寝坊してしまってやる気がでない")
                 Text("- 準備が面倒で行くのが面倒になる")
-                Text("- 飲み会のあとはだらだら過ごしてしまう")
+                Text("- 仕事帰りはつかれて寝てしまう")
             })
             .font(.headline)
             .padding(.top, 10)

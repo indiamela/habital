@@ -18,7 +18,7 @@ struct OutcomeSubView: View {
             VStack(alignment: .leading, spacing: 5, content: {
                 Text("- 社内評価があがって収入が高くなる！")
                 Text("- 筋肉がついてモテるようになる！")
-                Text("- 心身ともに健康になる！")
+                Text("- 頭の中のモヤモヤがすっきりする！")
             })
             .font(.headline)
             .padding(.top, 10)

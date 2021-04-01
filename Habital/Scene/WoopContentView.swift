@@ -98,16 +98,13 @@ struct WoopContentView: View {
         }
     }
     
-    func nextCategory(categoty: Woop.Category)->Woop.Category?{
-        switch category{
-        case .Wish:
+    func nextCategory(categoty: Woop.Category?)->Woop.Category?{
+        if category == .Wish{
             return .Outcome
-        case .Outcome:
+        }else if category == .Outcome{
             return .Obstacle
-        case .Obstacle:
+        }else {
             return .Plan
-        default:
-            return nil
         }
     }
 }
