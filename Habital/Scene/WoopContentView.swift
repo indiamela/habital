@@ -9,11 +9,6 @@ import SwiftUI
 
 struct WoopContentView: View {
     
-//    @State var wishText = ""
-//    @State var topImage:String
-//    @State var title:String
-//    @State var subtitle:String
-//    @State var textField:String
     @State var resultText = ""
     var category: Woop.Category
     
