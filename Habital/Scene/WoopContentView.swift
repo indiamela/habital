@@ -18,8 +18,7 @@ struct WoopContentView: View {
                 Image(category.topImage())
                     .resizable()
                     .scaledToFill()
-                    .frame(width: UIScreen.main.bounds.width, height:UIScreen.main.bounds.height/2.5, alignment: .leading)
-//                    .clipped()
+                    .frame(width: UIScreen.main.bounds.width, height:UIScreen.main.bounds.height/2, alignment: .leading)
                 Rectangle()
                     .fill(Color.MyTheme.Orange)
             }
@@ -27,8 +26,8 @@ struct WoopContentView: View {
 
             VStack{
                 Rectangle()
-                    .fill(LinearGradient.MyTheme.gradiateBackGround)
-                    .frame(height:UIScreen.main.bounds.height/2.5 + 10)
+                    .fill(LinearGradient.MyTheme.gradientBackGroundOrange)
+                    .frame(height:UIScreen.main.bounds.height/2 + 10)
                 Spacer()
             }
             .edgesIgnoringSafeArea(.all)
@@ -72,7 +71,21 @@ struct WoopContentView: View {
                 Spacer()
                 
                 if resultText != "" {
-                    NavigationLink(
+                    if category == .Plan{
+                        NavigationLink(
+                            destination:
+                                ConfirmView(),
+                            label: {
+                                Text("next".uppercased())
+                                    .foregroundColor(Color.MyTheme.DarkGray)
+                                    .font(.title2)
+                                    .fontWeight(.bold)
+                                    .frame(maxWidth:.infinity)
+                                    .frame(height: 60)
+                            }
+                        )
+                    }else{
+                        NavigationLink(
                         destination:
                             WoopContentView(category: nextCategory(categoty: category)!),
                         label: {
@@ -87,10 +100,12 @@ struct WoopContentView: View {
                     .background(LinearGradient.MyTheme.gradientPink)
                     .cornerRadius(60)
                     .shadow(radius: 12)
+                    }
                 }
             }
             .padding(.horizontal,50)
         }
+        .navigationBarBackButtonHidden(true)
     }
     
     func nextCategory(categoty: Woop.Category?)->Woop.Category?{
@@ -107,18 +122,10 @@ struct WoopContentView: View {
 struct WoopContentView_Previews: PreviewProvider {
     static var previews: some View {
         Group {
-            NavigationView{
                 WoopContentView(category: .Wish)
-            }
-            NavigationView{
                 WoopContentView(category: .Outcome)
-            }
-            NavigationView{
                 WoopContentView(category: .Obstacle)
-            }
-            NavigationView{
                 WoopContentView(category: .Plan)
-            }
 
         }
     }

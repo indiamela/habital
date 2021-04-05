@@ -9,7 +9,25 @@ import SwiftUI
 
 struct ConfirmView: View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        ZStack{
+            VStack{
+                Image("laugh")
+                    .resizable()
+                    .scaledToFill()
+                    .frame(width: UIScreen.main.bounds.width, height:UIScreen.main.bounds.height/2, alignment: .leading)
+                Rectangle()
+                    .fill(Color.MyTheme.Pink)
+            }
+            .edgesIgnoringSafeArea(.all)
+
+            VStack{
+                Rectangle()
+                    .fill(LinearGradient.MyTheme.gradientBackGroundPink)
+                    .frame(height:UIScreen.main.bounds.height/2 + 10)
+                Spacer()
+            }
+            .edgesIgnoringSafeArea(.all)
+        }
     }
 }
 
