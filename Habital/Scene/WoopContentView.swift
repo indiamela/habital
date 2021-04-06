@@ -65,8 +65,6 @@ struct WoopContentView: View {
                     PlanSubView()
                         .padding(.top, 50)
                 }
-
-
                 
                 Spacer()
                 
@@ -84,6 +82,9 @@ struct WoopContentView: View {
                                     .frame(height: 60)
                             }
                         )
+                        .background(LinearGradient.MyTheme.gradientPink)
+                        .cornerRadius(60)
+                        .shadow(radius: 12)
                     }else{
                         NavigationLink(
                         destination:
