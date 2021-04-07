@@ -9,7 +9,6 @@ import SwiftUI
 
 struct WoopContentView: View {
     
-    @State var resultText = ""
     var category: Woop.Category
     
     var body: some View {
@@ -32,76 +31,16 @@ struct WoopContentView: View {
             }
             .edgesIgnoringSafeArea(.all)
 
-            VStack{
-                VStack(alignment: .center, spacing: 20) {
-                    Text(category.title())
-                        .font(.custom("Times-Roman", size: 40))
-                        .fontWeight(.bold)
-                    Text(category.subtitle())
-                        .font(.headline)
-                }
-                .padding(.top, 200)
-                .foregroundColor(Color.MyTheme.DarkGray)
-                
-                TextField(category.subtitle(), text: $resultText)
-                    .frame(height: 40)
-                    .background(Color.white)
-                    .cornerRadius(10)
-                    .padding(.top, 20)
-                    .shadow(radius: 5)
-                    .foregroundColor(Color.MyTheme.DarkGray)
-                
+            VStack{                
                 switch category{
                 case .Wish:
                     WishSubView()
-                        .padding(.top, 50)
                 case .Outcome:
                     OutcomeSubView()
-                        .padding(.top, 50)
                 case .Obstacle:
                     ObstacleSubView()
-                        .padding(.top, 50)
                 case .Plan:
                     PlanSubView()
-                        .padding(.top, 50)
-                }
-                
-                Spacer()
-                
-                if resultText != "" {
-                    if category == .Plan{
-                        NavigationLink(
-                            destination:
-                                ConfirmView(),
-                            label: {
-                                Text("next".uppercased())
-                                    .foregroundColor(Color.MyTheme.DarkGray)
-                                    .font(.title2)
-                                    .fontWeight(.bold)
-                                    .frame(maxWidth:.infinity)
-                                    .frame(height: 60)
-                            }
-                        )
-                        .background(LinearGradient.MyTheme.gradientPink)
-                        .cornerRadius(60)
-                        .shadow(radius: 12)
-                    }else{
-                        NavigationLink(
-                        destination:
-                            WoopContentView(category: nextCategory(categoty: category)!),
-                        label: {
-                            Text("next".uppercased())
-                                .foregroundColor(Color.MyTheme.DarkGray)
-                                .font(.title2)
-                                .fontWeight(.bold)
-                                .frame(maxWidth:.infinity)
-                                .frame(height: 60)
-                        }
-                    )
-                    .background(LinearGradient.MyTheme.gradientPink)
-                    .cornerRadius(60)
-                    .shadow(radius: 12)
-                    }
                 }
             }
             .padding(.horizontal,50)

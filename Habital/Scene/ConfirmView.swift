@@ -32,22 +32,22 @@ struct ConfirmView: View {
                 Spacer()
                 List{
                     Section(header: Text("あなたが身につけたい習慣目標は？")){
-                        Text("- 毎朝20分、読書する")
+                        Text("毎朝20分、読書する")
                     }
                     Section(header: Text("その習慣を続けたらどんな自分に生まれ変わりますか？")){
-                        Text("- 毎朝20分、読書する")
-                        Text("- 帰宅後にジムで筋トレする")
-                        Text("- 夜寝る前、日記をつける")
+                        Text("毎朝20分、読書する")
+                        Text("帰宅後にジムで筋トレする")
+                        Text("夜寝る前、日記をつける")
                     }
                     Section(header: Text("あなたの行動を妨げることが起きるとしたら何がありますか？")){
-                        Text("- 毎朝20分、読書する")
-                        Text("- 帰宅後にジムで筋トレする")
-                        Text("- 夜寝る前、日記をつける")
+                        Text("毎朝20分、読書する")
+                        Text("帰宅後にジムで筋トレする")
+                        Text("夜寝る前、日記をつける")
                     }
                     Section(header: Text( "その障害が起きたとき、どうすれば乗り越えられますか？")){
-                        Text("- 毎朝20分、読書する")
-                        Text("- 帰宅後にジムで筋トレする")
-                        Text("- 夜寝る前、日記をつける")
+                        Text("毎朝20分、読書する")
+                        Text("帰宅後にジムで筋トレする")
+                        Text("夜寝る前、日記をつける")
                     }
                 }
                 .frame(height:UIScreen.main.bounds.height/2, alignment: .leading)
