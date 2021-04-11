@@ -9,6 +9,7 @@ import SwiftUI
 
 struct OutcomeSubView: View {
     @State var resultText = ""
+    @State var countMax = false
     @State var woopArray = [WoopModel]()
     @State var textArray:[String] = []
 
@@ -21,7 +22,7 @@ struct OutcomeSubView: View {
                 Text(Woop.Category.Outcome.subtitle())
                     .font(.headline)
             }
-            .padding(.top, 100)
+            .padding(.top, 170)
             .foregroundColor(Color.MyTheme.DarkGray)
             
             HStack{
@@ -31,7 +32,7 @@ struct OutcomeSubView: View {
                     .cornerRadius(10)
                     .foregroundColor(Color.MyTheme.DarkGray)
                 Button(action: {
-                    textArray.append(resultText)
+                    addText()
                 }, label: {
                     Image(systemName: "plus.circle.fill")
                         .font(.title)
@@ -43,13 +44,21 @@ struct OutcomeSubView: View {
             }
             .padding(.top, 20)
             .shadow(radius: 5)
+            
+            if countMax {
+                Text("※追加できるのは5つまでです")
+                    .foregroundColor(.red)
+                    .font(.callout)
+            }
 
             List{
                 ForEach(textArray, id: \.self){ text in
                     Text(text)
-                }
+                }.onDelete(perform: { indexSet in
+                    textArray.remove(atOffsets: indexSet)
+                })
             }
-            .frame(height:UIScreen.main.bounds.height/3, alignment: .leading)
+            .frame(height:200, alignment: .leading)
             .cornerRadius(30)
             .shadow(radius: 12)
             .opacity(0.7)
@@ -59,7 +68,7 @@ struct OutcomeSubView: View {
             
             Spacer()
             
-            if resultText != "" {
+            if textArray.count != 0 {
                 NavigationLink(
                     destination:
                         WoopContentView(category: Woop.Category.Obstacle),
@@ -76,6 +85,14 @@ struct OutcomeSubView: View {
                 .cornerRadius(60)
                 .shadow(radius: 12)
             }
+        }
+    }
+    
+    func addText(){
+        if textArray.count < 5{
+            textArray.append(resultText)
+        }else{
+            countMax = true
         }
     }
 }

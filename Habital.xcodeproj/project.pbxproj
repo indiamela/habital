@@ -18,6 +18,7 @@
 		F2396571261059C7004A37BB /* WoopEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2396570261059C7004A37BB /* WoopEntity.swift */; };
 		F2396576261075A4004A37BB /* WishSubView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2396575261075A4004A37BB /* WishSubView.swift */; };
 		F239657B261076E0004A37BB /* WoopContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F239657A261076E0004A37BB /* WoopContentView.swift */; };
+		F23C7F8C2623000200110835 /* KeyboadObserver.swift in Sources */ = {isa = PBXBuildFile; fileRef = F23C7F8B2623000200110835 /* KeyboadObserver.swift */; };
 		F26990C325FC6DFC00E37781 /* HabitalApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F26990C225FC6DFC00E37781 /* HabitalApp.swift */; };
 		F26990C525FC6DFC00E37781 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F26990C425FC6DFC00E37781 /* ContentView.swift */; };
 		F26990C725FC6DFD00E37781 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F26990C625FC6DFD00E37781 /* Assets.xcassets */; };
@@ -66,6 +67,7 @@
 		F2396570261059C7004A37BB /* WoopEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WoopEntity.swift; sourceTree = "<group>"; };
 		F2396575261075A4004A37BB /* WishSubView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WishSubView.swift; sourceTree = "<group>"; };
 		F239657A261076E0004A37BB /* WoopContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WoopContentView.swift; sourceTree = "<group>"; };
+		F23C7F8B2623000200110835 /* KeyboadObserver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboadObserver.swift; sourceTree = "<group>"; };
 		F26990BF25FC6DFC00E37781 /* Habital.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Habital.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F26990C225FC6DFC00E37781 /* HabitalApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HabitalApp.swift; sourceTree = "<group>"; };
 		F26990C425FC6DFC00E37781 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -232,6 +234,7 @@
 			isa = PBXGroup;
 			children = (
 				F285BCBB2602B80800DA9459 /* Extension.swift */,
+				F23C7F8B2623000200110835 /* KeyboadObserver.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -492,6 +495,7 @@
 				F285BCBC2602B80800DA9459 /* Extension.swift in Sources */,
 				F2340D4726168940009E3394 /* ConfirmView.swift in Sources */,
 				F26990CF25FC6DFD00E37781 /* Habital.xcdatamodeld in Sources */,
+				F23C7F8C2623000200110835 /* KeyboadObserver.swift in Sources */,
 				F285BCEA2608070C00DA9459 /* WoopList.swift in Sources */,
 				F239656C260BF7C8004A37BB /* WoopArrayObject.swift in Sources */,
 				F26990C525FC6DFC00E37781 /* ContentView.swift in Sources */,

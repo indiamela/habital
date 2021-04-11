@@ -12,6 +12,7 @@ struct WelcomeView: View {
     let maxCount = 5
     @State var selection: Int = 0
     @State var timerAdded: Bool = false
+    @ObservedObject var keyboard = KeyboardObserver()
     
     
     var body: some View {
@@ -69,6 +70,14 @@ struct WelcomeView: View {
                     .padding(.horizontal,50)
                 }
             }
+        }
+        .onAppear{
+            keyboard.startObserve()
+            UIApplication.shared.closeKeyboard()
+        }
+        .onDisappear{
+            keyboard.stopObserve()
+            UIApplication.shared.closeKeyboard()
         }
     }
     
