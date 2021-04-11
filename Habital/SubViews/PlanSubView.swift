@@ -8,23 +8,91 @@
 import SwiftUI
 
 struct PlanSubView: View {
-    
+    @State var resultText = ""
+    @State var countMax = false
+    @State var woopArray = [WoopModel]()
+    @State var textArray:[String] = []
+
     var body: some View {
         VStack{
-            Text("たとえば...")
-                .font(.subheadline)
-                .frame(maxWidth: .infinity, alignment: .leading)
-                .foregroundColor(Color.MyTheme.DarkGray)
-            VStack(alignment: .leading, spacing: 5, content: {
-                Text("- 毎朝スッキリ起きるために夜10時には必ずねる！")
-                Text("- ジムの服装を常にもっておく！")
-                Text("- 飲み会は1時間で切り上げる！")
-            })
-            .font(.headline)
-            .padding(.top, 10)
-            .padding(.leading, 10)
-            .frame(maxWidth: .infinity, alignment: .leading)
+            VStack(alignment: .center, spacing: 20) {
+                Text(Woop.Category.Plan.title())
+                    .font(.custom("Times-Roman", size: 40))
+                    .fontWeight(.bold)
+                Text(Woop.Category.Plan.subtitle())
+                    .font(.headline)
+            }
+            .padding(.top, 170)
             .foregroundColor(Color.MyTheme.DarkGray)
+            
+            HStack{
+                TextField(Woop.Category.Plan.textField(), text: $resultText)
+                    .frame(height: 40)
+                    .background(Color.white)
+                    .cornerRadius(10)
+                    .foregroundColor(Color.MyTheme.DarkGray)
+                Button(action: {
+                    addText()
+                }, label: {
+                    Image(systemName: "plus.circle.fill")
+                        .font(.title)
+                        .foregroundColor(Color.MyTheme.DarkGray)
+
+                })
+                .padding(.all, 6)
+
+            }
+            .padding(.top, 20)
+            .shadow(radius: 5)
+            
+            if countMax {
+                Text("※追加できるのは5つまでです")
+                    .foregroundColor(.red)
+                    .font(.callout)
+            }
+
+            List{
+                ForEach(textArray, id: \.self){ text in
+                    Text(text)
+                }.onDelete(perform: { indexSet in
+                    textArray.remove(atOffsets: indexSet)
+                })
+            }
+            .frame(height:200, alignment: .leading)
+            .cornerRadius(30)
+            .shadow(radius: 12)
+            .opacity(0.7)
+            .padding(.top, 30)
+            
+            Spacer()
+            
+            if textArray.count != 0 {
+                NavigationLink(
+                    destination:
+                        ConfirmView(),
+                    label: {
+                        Text("next".uppercased())
+                            .foregroundColor(Color.MyTheme.DarkGray)
+                            .font(.title2)
+                            .fontWeight(.bold)
+                            .frame(maxWidth:.infinity)
+                            .frame(height: 60)
+                    }
+                )
+                .background(LinearGradient.MyTheme.gradientPink)
+                .cornerRadius(60)
+                .shadow(radius: 12)
+            }
+        }
+    }
+    
+    func addText(){
+        if textArray.count < 5{
+            guard !resultText.isEmpty else { return }
+            textArray.append(resultText)
+            resultText = ""
+        }else{
+            countMax = true
         }
     }
 }

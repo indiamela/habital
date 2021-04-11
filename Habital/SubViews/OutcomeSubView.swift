@@ -26,7 +26,7 @@ struct OutcomeSubView: View {
             .foregroundColor(Color.MyTheme.DarkGray)
             
             HStack{
-                TextField(Woop.Category.Outcome.subtitle(), text: $resultText)
+                TextField(Woop.Category.Outcome.textField(), text: $resultText)
                     .frame(height: 40)
                     .background(Color.white)
                     .cornerRadius(10)
@@ -62,9 +62,7 @@ struct OutcomeSubView: View {
             .cornerRadius(30)
             .shadow(radius: 12)
             .opacity(0.7)
-            .padding(.top, 40)
-
-            
+            .padding(.top, 30)
             
             Spacer()
             
@@ -90,7 +88,9 @@ struct OutcomeSubView: View {
     
     func addText(){
         if textArray.count < 5{
+            guard !resultText.isEmpty else { return }
             textArray.append(resultText)
+            resultText = ""
         }else{
             countMax = true
         }
@@ -98,7 +98,6 @@ struct OutcomeSubView: View {
 }
 
 struct OutcomeSubView_Previews: PreviewProvider {
-    var wishText = "毎朝20分、読書する"
     static var previews: some View {
         OutcomeSubView()
             .previewLayout(.sizeThatFits)

@@ -52,26 +52,26 @@ extension Woop{
         func subtitle() -> String {
             switch self {
             case .Wish:
-                return "あなたが身につけたい習慣目標は？"
+                return "あなたが身につけたい習慣は？"
             case .Outcome:
                 return "その習慣を続けたらどんな自分に生まれ変わりますか？"
             case .Obstacle:
-                return "あなたの行動を妨げることが起きるとしたら何がありますか？"
+                return "達成する際にどんなトラブルが発生しそうですか？"
             case .Plan:
-                return "その障害が起きたとき、どうすれば乗り越えられますか？"
+                return "そのトラブルはどうすれば乗り越えられますか？"
             }
         }
         
         func textField() -> String {
             switch self {
             case .Wish:
-                return "add your wish"
+                return "毎朝20分間、勉強をする"
             case .Outcome:
-                return "add your outcome"
+                return "仕事の成果が認められて1年後に年収アップ！"
             case .Obstacle:
-                return "add your obstacle"
+                return "寝坊をしてしまってやる気がなくなる"
             case .Plan:
-                return "add your plan"
+                return "少なくとも5分間だけやる！毎晩10時には必ず寝る！"
             }
         }
     }
