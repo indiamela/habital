@@ -10,8 +10,8 @@ import SwiftUI
 struct ObstacleSubView: View {
     @State var resultText = ""
     @State var countMax = false
-    @State var woopArray = [WoopModel]()
     @State var textArray:[String] = []
+    var userDefaults = UserDefaults.standard
 
     var body: some View {
         VStack{
@@ -22,7 +22,7 @@ struct ObstacleSubView: View {
                 Text(Woop.Category.Obstacle.subtitle())
                     .font(.headline)
             }
-            .padding(.top, 170)
+            .padding(.top, 150)
             .foregroundColor(Color.MyTheme.DarkGray)
             
             HStack{
@@ -67,21 +67,20 @@ struct ObstacleSubView: View {
             Spacer()
             
             if textArray.count != 0 {
-                NavigationLink(
-                    destination:
-                        WoopContentView(category: Woop.Category.Plan),
-                    label: {
+                VStack{
+                    NavigationLink(destination: WoopContentView(category: Woop.Category.Plan)){
                         Text("next".uppercased())
                             .foregroundColor(Color.MyTheme.DarkGray)
                             .font(.title2)
                             .fontWeight(.bold)
                             .frame(maxWidth:.infinity)
                             .frame(height: 60)
+                            .onTapGesture(perform: saveArray)
                     }
-                )
-                .background(LinearGradient.MyTheme.gradientPink)
-                .cornerRadius(60)
-                .shadow(radius: 12)
+                    .background(LinearGradient.MyTheme.gradientPink)
+                    .cornerRadius(60)
+                    .shadow(radius: 12)
+                }
             }
         }
     }
@@ -95,6 +94,12 @@ struct ObstacleSubView: View {
             countMax = true
         }
     }
+    
+    func saveArray(){
+        guard !textArray.isEmpty else { return }
+        userDefaults.setValue(textArray, forKey: "obstacle")
+    }
+
 }
 
 struct ObstacleSubView_Previews: PreviewProvider {

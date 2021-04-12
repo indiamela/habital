@@ -8,10 +8,7 @@
 import SwiftUI
 
 struct ConfirmView: View {
-    @State var resultText = ""
-    @State var countMax = false
-    @State var woopArray = [WoopModel]()
-    @State var textArray:[String] = []
+    var userDefaults = UserDefaults.standard
 
     var body: some View {
         VStack{
@@ -22,19 +19,20 @@ struct ConfirmView: View {
                 Text("さあ、はじめましょう！")
                     .font(.headline)
             }
-            .padding(.top, 170)
+            .padding(.top, 150)
             .foregroundColor(Color.MyTheme.DarkGray)
             
 
             
             List{
                 Section(header: Text("あなたが身につけたい習慣目標は？")){
-                    Text("毎朝20分、読書する")
+                    Text(userDefaults.string(forKey: "wish") ?? "")
                 }
                 Section(header: Text("その習慣を続けたらどんな自分に生まれ変わりますか？")){
+//                    ForEach(userDefaults.array(forKey: "outcome") ?? [],id(\.self){ text in
+//                        Text(text)
+//                    })
                     Text("毎朝20分、読書する")
-                    Text("帰宅後にジムで筋トレする")
-                    Text("夜寝る前、日記をつける")
                 }
                 Section(header: Text("あなたの行動を妨げることが起きるとしたら何がありますか？")){
                     Text("毎朝20分、読書する")
