@@ -29,20 +29,19 @@ struct ConfirmView: View {
                     Text(userDefaults.string(forKey: "wish") ?? "")
                 }
                 Section(header: Text("その習慣を続けたらどんな自分に生まれ変わりますか？")){
-//                    ForEach(userDefaults.array(forKey: "outcome") ?? [],id(\.self){ text in
-//                        Text(text)
-//                    })
-                    Text("毎朝20分、読書する")
+                    ForEach(0..<userDefaults.stringArray(forKey: "outcome")!.count){
+                        Text(userDefaults.stringArray(forKey: "outcome")![$0])
+                    }
                 }
                 Section(header: Text("あなたの行動を妨げることが起きるとしたら何がありますか？")){
-                    Text("毎朝20分、読書する")
-                    Text("帰宅後にジムで筋トレする")
-                    Text("夜寝る前、日記をつける")
+                    ForEach(0..<userDefaults.stringArray(forKey: "obstacle")!.count){
+                        Text(userDefaults.stringArray(forKey: "obstacle")![$0])
+                    }
                 }
                 Section(header: Text( "その障害が起きたとき、どうすれば乗り越えられますか？")){
-                    Text("毎朝20分、読書する")
-                    Text("帰宅後にジムで筋トレする")
-                    Text("夜寝る前、日記をつける")
+                    ForEach(0..<userDefaults.stringArray(forKey: "plan")!.count){
+                        Text(userDefaults.stringArray(forKey: "plan")![$0])
+                    }
                 }
             }
             .frame(height:350, alignment: .leading)
