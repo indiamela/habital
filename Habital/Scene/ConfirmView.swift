@@ -11,79 +11,99 @@ struct ConfirmView: View {
     var userDefaults = UserDefaults.standard
 
     var body: some View {
-        VStack{
-            VStack(alignment: .center, spacing: 20) {
-                Text("done!!".uppercased())
-                    .font(.custom("Times-Roman", size: 40))
-                    .fontWeight(.bold)
-                Text("さあ、はじめましょう！")
-                    .font(.headline)
-            }
-            .padding(.top, 150)
-            .foregroundColor(Color.MyTheme.DarkGray)
-            
+            ZStack{
+                VStack{
+                    Image("laugh")
+                        .resizable()
+                        .scaledToFill()
+                        .frame(width: UIScreen.main.bounds.width, height:UIScreen.main.bounds.height/2, alignment: .leading)
+                    Rectangle()
+                        .fill(Color.MyTheme.Orange)
+                }
+                .edgesIgnoringSafeArea(.all)
 
-            
-            List{
-                Section(header: Text("あなたが身につけたい習慣目標は？")){
-                    Text(userDefaults.string(forKey: "wish") ?? "")
+                VStack{
+                    Rectangle()
+                        .fill(LinearGradient.MyTheme.gradientBackGroundOrange)
+                        .frame(height:UIScreen.main.bounds.height/2 + 10)
+                    Spacer()
                 }
-                Section(header: Text("その習慣を続けたらどんな自分に生まれ変わりますか？")){
-                    ForEach(0..<userDefaults.stringArray(forKey: "outcome")!.count){
-                        Text(userDefaults.stringArray(forKey: "outcome")![$0])
+                .edgesIgnoringSafeArea(.all)
+                
+                VStack{
+                    VStack(alignment: .center, spacing: 20) {
+                        Text("done!!".uppercased())
+                            .font(.custom("Times-Roman", size: 40))
+                            .fontWeight(.bold)
+                        Text("さあ、はじめましょう！")
+                            .font(.headline)
                     }
-                }
-                Section(header: Text("あなたの行動を妨げることが起きるとしたら何がありますか？")){
-                    ForEach(0..<userDefaults.stringArray(forKey: "obstacle")!.count){
-                        Text(userDefaults.stringArray(forKey: "obstacle")![$0])
+                    .padding(.top, 150)
+                    .foregroundColor(Color.MyTheme.DarkGray)
+                    
+                    List{
+                        //                    Section(header: Text("あなたが身につけたい習慣目標は？")){
+                        //                        Text(userDefaults.string(forKey: "wish") ?? "")
+                        //                    }
+                        //                    Section(header: Text("その習慣を続けたらどんな自分に生まれ変わりますか？")){
+                        //                        ForEach(0..<userDefaults.stringArray(forKey: "outcome")!.count){
+                        //                            Text(userDefaults.stringArray(forKey: "outcome")![$0])
+                        //                        }
+                        //                    }
+                        //                    Section(header: Text("あなたの行動を妨げることが起きるとしたら何がありますか？")){
+                        //                        ForEach(0..<userDefaults.stringArray(forKey: "obstacle")!.count){
+                        //                            Text(userDefaults.stringArray(forKey: "obstacle")![$0])
+                        //                        }
+                        //                    }
+                        //                    Section(header: Text( "その障害が起きたとき、どうすれば乗り越えられますか？")){
+                        //                        ForEach(0..<userDefaults.stringArray(forKey: "plan")!.count){
+                        //                            Text(userDefaults.stringArray(forKey: "plan")![$0])
+                        //                        }
+                        //                    }
                     }
-                }
-                Section(header: Text( "その障害が起きたとき、どうすれば乗り越えられますか？")){
-                    ForEach(0..<userDefaults.stringArray(forKey: "plan")!.count){
-                        Text(userDefaults.stringArray(forKey: "plan")![$0])
+                    .frame(height:350, alignment: .leading)
+                    .cornerRadius(30)
+                    .shadow(radius: 12)
+                    .opacity(0.7)
+                    .padding(.top, 30)
+                    .padding(.horizontal,50)
+                    
+                    Spacer()
+                    
+                    VStack{
+                        NavigationLink(
+                            destination:
+                                WoopContentView(category: Woop.Category.Wish),
+                            label: {
+                                Text("変更する".uppercased())
+                                    .foregroundColor(Color.white)
+                                    .font(.title2)
+                                    .fontWeight(.bold)
+                                    .frame(maxWidth:.infinity)
+                                    .frame(height: 60)
+                            })
+                            .background(Color.gray)
+                            .cornerRadius(60)
+                            .shadow(radius: 12)
+                        NavigationLink(
+                            destination:
+                                WoopContentView(category: Woop.Category.Wish),
+                            label: {
+                                Text("start!".uppercased())
+                                    .foregroundColor(Color.MyTheme.DarkGray)
+                                    .font(.title2)
+                                    .fontWeight(.bold)
+                                    .frame(maxWidth:.infinity)
+                                    .frame(height: 60)
+                            })
+                            .background(LinearGradient.MyTheme.gradientOrange)
+                            .cornerRadius(60)
+                            .shadow(radius: 12)
+                            .padding(.top,7)
                     }
                 }
             }
-            .frame(height:350, alignment: .leading)
-            .cornerRadius(30)
-            .shadow(radius: 12)
-            .opacity(0.7)
-            .padding(.top, 30)
-            
-            Spacer()
-            
-            VStack{
-                NavigationLink(
-                    destination:
-                        WoopContentView(category: Woop.Category.Wish),
-                    label: {
-                        Text("変更する".uppercased())
-                            .foregroundColor(Color.white)
-                            .font(.title2)
-                            .fontWeight(.bold)
-                            .frame(maxWidth:.infinity)
-                            .frame(height: 60)
-                    })
-                    .background(Color.gray)
-                    .cornerRadius(60)
-                    .shadow(radius: 12)
-                NavigationLink(
-                    destination:
-                        WoopContentView(category: Woop.Category.Wish),
-                    label: {
-                        Text("start!".uppercased())
-                            .foregroundColor(Color.MyTheme.DarkGray)
-                            .font(.title2)
-                            .fontWeight(.bold)
-                            .frame(maxWidth:.infinity)
-                            .frame(height: 60)
-                    })
-                    .background(LinearGradient.MyTheme.gradientOrange)
-                    .cornerRadius(60)
-                    .shadow(radius: 12)
-                    .padding(.top,7)
-            }
-        }
+            .navigationBarBackButtonHidden(true)
     }
 }
 
